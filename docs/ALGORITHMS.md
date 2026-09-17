@@ -4,7 +4,7 @@ This document contains key concepts, patterns, and strategies for solving common
 
 ---
 
-## 1. 滑动窗口 (Sliding Window Algorithm)
+## 1. (Sliding Window Algorithm)
 
 The **Sliding Window** technique is used to process a contiguous block of elements in a sequence (array, list, string) efficiently. It avoids redundant computations by reusing results of the overlapping parts of the window.
 
@@ -22,7 +22,7 @@ Instead of recalculating results from scratch for every subarray/substring, we m
 
 ---
 
-## 2. 双指针 (Two Pointer Technique)
+## 2. (Two Pointer Technique)
 
 The **Two Pointer** technique uses two reference pointers traversing through a sequence (usually an array or linked list) to find target pairs or sub-segments.
 
@@ -37,3 +37,35 @@ The **Two Pointer** technique uses two reference pointers traversing through a s
 * When working with Linked Lists.
 * When finding pairs, triplets, or subarrays in a linear structure satisfying a specific sum or property.
 * For in-place array transformations (e.g., reverse, partition, merge).
+
+
+# backtracking
+A simple mental model
+
+Whenever you're stuck on a backtracking problem, ask these 4 questions:
+
+1. What is my current state?
+2. What choices do I have?
+3. When is my solution complete?
+4. What do I need to undo after recursion?
+
+For Letter Combinations:
+
+Current state → current string
+Choices       → letters mapped to current digit
+Complete      → processed all digits
+Undo          → not required because we create new strings
+
+For Subsets:
+
+Current state → current subset
+Choices       → take / don't take
+Complete      → processed all numbers
+Undo          → current.pop()
+
+For Permutations:
+
+Current state → current permutation
+Choices       → unused numbers
+Complete      → permutation length == input length
+Undo          → pop + remove from used
