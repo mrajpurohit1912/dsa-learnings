@@ -19,8 +19,11 @@ class Solution:
         
         return not stack
 
+
+
 if __name__ == "__main__":
     sl = Solution()
     test_cases = ["()[]{}", "([)]", "{[]}", "(]"]
     for test in test_cases:
         print(f"Input: {test} -> Valid: {sl.isValid(test)}")
+   
